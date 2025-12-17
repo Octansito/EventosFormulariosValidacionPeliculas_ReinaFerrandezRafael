@@ -7,6 +7,9 @@ import Home from "../pages/Home";
 import Peliculas from "../pages/Peliculas";
 import Interpretes from "../pages/Interpretes";
 import Admin from "../pages/Admin";
+import NuevoInterprete from "../pages/NuevoInterprete";
+import PeliculaControlado from "../pages/PeliculaControlado";
+import PeliculaNoControlado from "../pages/PeliculaNoControlado";
 
 function AppRouter() {
   return (
@@ -18,8 +21,16 @@ function AppRouter() {
         <Route path="/peliculas" element={<Peliculas />} />
         <Route path="/interpretes" element={<Interpretes />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/detalle/pelicula/:idPeli" element={<Detail es="pelicula" />} />
-        <Route path="/detalle/pelicula/:idPeli/interprete/:idInterprete" element={<Detail es="interprete" />} />
+        <Route
+          path="/detalle/pelicula/:idPeli"
+          element={<Detail es="pelicula" />}
+        />
+        <Route path="/nuevointerprete" element={<NuevoInterprete />} />
+        <Route path="/peliculacontrolado" element={<PeliculaControlado />} />
+        <Route
+          path="/peliculanocontrolado"
+          element={<PeliculaNoControlado />}
+        />
       </Route>
 
       {/* Página 404 */}
