@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 import Peliculas from "../pages/Peliculas";
 import Interpretes from "../pages/Interpretes";
 import Admin from "../pages/Admin";
-import NuevoInterprete from "../pages/NuevoInterprete";
+import FormularioInterprete from "../pages/FormularioInterprete";
 import PeliculaControlado from "../pages/PeliculaControlado";
 import PeliculaNoControlado from "../pages/PeliculaNoControlado";
 
@@ -25,7 +25,10 @@ function AppRouter() {
           path="/detalle/pelicula/:idPeli"
           element={<Detail es="pelicula" />}
         />
-        <Route path="/nuevointerprete" element={<NuevoInterprete />} />
+        <Route
+          path="/formulariointerprete"
+          element={<FormularioInterprete />}
+        />
         <Route path="/peliculacontrolado" element={<PeliculaControlado />} />
         <Route
           path="/peliculanocontrolado"

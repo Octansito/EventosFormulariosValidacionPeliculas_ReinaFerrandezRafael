@@ -14,7 +14,7 @@ function Admin() {
               Añadir Película (Controlado)
             </button>
           </NavLink>
-          <NavLink to="peliculanocontrolado">
+          <NavLink to="/peliculanocontrolado">
             <button
               type="button"
               className="w-full px-4 py-3 text-grey-600 border border-transparent rounded-lg bg-blue-50 hover:border-blue-500 hover:bg-blue-100 hover:text-blue-700 transition"
@@ -22,7 +22,7 @@ function Admin() {
               Añadir Película (No Controlado)
             </button>
           </NavLink>
-          <NavLink to="formulariointerprete">
+          <NavLink to="/formulariointerprete">
             <button
               type="button"
               className="w-full px-4 py-3 text-grey-600 border border-transparent rounded-lg bg-blue-50 hover:border-blue-500 hover:bg-blue-100 hover:text-blue-700 transition"
