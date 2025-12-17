@@ -52,7 +52,7 @@ function PeliculaNoControlado() {
         className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md"
       >
         <div className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">
-          Formulario Controlado &quot;
+          Formulario NO Controlado &quot;
         </div>
 
         <div className="mb-4">

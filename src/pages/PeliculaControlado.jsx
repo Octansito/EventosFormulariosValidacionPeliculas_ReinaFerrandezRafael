@@ -19,7 +19,7 @@ function PeliculaControlado() {
       setError("Error al introducir el director");
       return;
     }
-    if (Number(nota) < 1 || Number(nota) > 10) {
+    if (Number(nota) < 1 || nota(nota) > 10) {
       setError("Nota no válida");
       return;
     }
