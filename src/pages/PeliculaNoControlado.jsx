@@ -1,16 +1,23 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-function PeliculaControlado() {
+function PeliculaNoControlado() {
   const nombreRef = useRef(null);
   const directorRef = useRef(null);
   const clasificacionRef = useRef(null);
   const recaudacionRef = useRef(null);
   const notaRef = useRef(null);
   const carteleraRef = useRef(null);
-  const errorRef = useRef(null);
+  const [error, setError] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
+    const nombre = nombreRef.current.value;
+    const director = directorRef.current.value;
+    const clasificacion = clasificacionRef.current.value;
+    const recaudacion = recaudacionRef.current.value;
+    const nota = notaRef.current.value;
+    const cartelera = carteleraRef.current.value;
+
     if (nombre.trim().length < 5) {
       setError("Error al introducir el nombre");
       return;
@@ -58,8 +65,7 @@ function PeliculaControlado() {
           <input
             id="nombre"
             type="text"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+            ref={nombreRef}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
@@ -75,8 +81,7 @@ function PeliculaControlado() {
           <input
             id="director"
             type="text"
-            value={director}
-            onChange={(e) => setDirector(e.target.value)}
+            ref={directorRef}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
@@ -92,8 +97,7 @@ function PeliculaControlado() {
           <input
             id="clasificacion"
             type="text"
-            value={clasificacion}
-            onChange={(e) => setClasificacion(e.target.value)}
+            ref={clasificacionRef}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
@@ -109,8 +113,7 @@ function PeliculaControlado() {
           <input
             id="recaudacion"
             type="text"
-            value={recaudacion}
-            onChange={(e) => setRecaudacion(e.target.value)}
+            ref={recaudacionRef}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
         </div>
@@ -125,8 +128,7 @@ function PeliculaControlado() {
           <input
             id="nota"
             type="number"
-            value={nota}
-            onChange={(e) => setNota(e.target.value)}
+            ref={notaRef}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
@@ -142,8 +144,7 @@ function PeliculaControlado() {
           <input
             id="cartelera"
             type="url"
-            value={cartelera}
-            onChange={(e) => setCartelera(e.target.value)}
+            ref={carteleraRef}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
           />
@@ -170,4 +171,4 @@ function PeliculaControlado() {
   );
 }
 
-export default PeliculaControlado;
+export default PeliculaNoControlado;
